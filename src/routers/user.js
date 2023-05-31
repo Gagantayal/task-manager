@@ -32,18 +32,18 @@ router.post('/user/login',async (req,res)=>{
         res.status(404).send(e)
     }
 })
-// router.get('/user/me', auth, async (req, res) => {
-//     res.send(req.user)
-// })
+router.get('/user/me', auth, async (req, res) => {
+    res.send(req.user)
+})
 
-router.get('/user', async(req,res)=>{
-    try{
-            const users = await User.find({})
-            res.send(users) 
-        }
-    catch(e){
-        res.status(500).send()
-    }})
+// router.get('/user', async(req,res)=>{
+//     try{
+//             const users = await User.find({})
+//             res.send(users) 
+//         }
+//     catch(e){
+//         res.status(500).send()
+//     }})
 
     // User.find({}).then((users) => {
     //     res.send(users)
