@@ -48,17 +48,27 @@ app.listen(port,()=>{
     console.log('server is  up on port ' + port)
 })
 
-const Task = require('./models/task')
-const User = require('./models/user')
+// const Task = require('./models/task')
+// const User = require('./models/user')
 
-const main = async () => {
-    //const task = await Task.findById('647c82b8d58b036e16e235b9').populate('owner');
-   // await task.populate('owner').execPopulate(); 
-    //console.log(task)
+// const main = async () => {
+//     //const task = await Task.findById('647c82b8d58b036e16e235b9').populate('owner');
+//    // await task.populate('owner').execPopulate(); 
+//     //console.log(task)
 
-     const user = await User.findById('647d768b268c05d2695414cf').populate('tasks')
-    // await user.populate('tasks').execPopulate()
-  //   console.log(user.tasks)
-}
+//     // const user = await User.findById('647d768b268c05d2695414cf').populate('tasks')
+//     // await user.populate('tasks').execPopulate()
+//   //   console.log(user.tasks)
+// }
 
-main()
+// main()
+
+// const multer = require('multer')
+// const upload = multer({
+//     dest: 'images'
+// })
+// app.post('/upload', upload.single('upload'), (req, res) => {
+//     res.send()
+// })
+
+
