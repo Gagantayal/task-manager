@@ -1,10 +1,11 @@
 const express = require("express")
 const UserRouter = require('./routers/user')
 const TaskRouter = require('./routers/task')
+
 require('./db/mongoose')
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 app.use(express.json())
 app.use(UserRouter)
@@ -70,5 +71,3 @@ app.listen(port,()=>{
 // app.post('/upload', upload.single('upload'), (req, res) => {
 //     res.send()
 // })
-
-

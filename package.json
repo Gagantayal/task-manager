@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "env-cmd ./config/dev.env nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,9 +16,14 @@
     "mongodb": "^5.3.0",
     "mongoose": "^7.0.5",
     "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.3",
     "nodemon": "^2.0.22",
     "sharp": "^0.32.1",
     "validate": "^5.2.0",
     "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "env": "^0.0.2",
+    "env-cmd": "^10.1.0"
   }
 }
