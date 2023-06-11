@@ -1,7 +1,7 @@
 const express = require("express")
 const UserRouter = require('./routers/user')
 const TaskRouter = require('./routers/task')
-
+require('dotenv/config')
 require('./db/mongoose')
 
 const app = express()
@@ -11,14 +11,14 @@ app.use(express.json())
 app.use(UserRouter)
 app.use(TaskRouter)
 
-// const router = new express.Router()
+// const router = new express.Router() 
 // router.get('/test',(req,res)=>{
 //     res.send("success")
 // })
 // app.use(router)
 
 
-// BCRYPT
+// BCRYPT 
 
 // const b = require('bcrypt')
 // const myFunction = async()=>{
